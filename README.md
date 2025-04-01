@@ -1,51 +1,77 @@
 <!---
 {
-  "depends_on": [],
+  "depends_on": [
+    "https://github.com/STEMgraph/9a437897-663d-442b-82bd-f34643db7e4e"
+  ],
   "author": "Stephan Bökelmann",
-  "first_used": "2025-03-17",
-  "keywords": ["learning", "exercises", "education", "practice"]
+  "first_used": "2025-04-01",
+  "keywords": ["karnaugh map", "truth table", "boolean", "minimization"]
 }
 --->
 
-# Learning Through Exercises
+# K-Map Minimization of Boolean Expressions
 
 ## 1) Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
 
-### 1.1) Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
+Karnaugh Maps (K-Maps) provide a visual method for simplifying Boolean expressions. They allow us to group together adjacent minterms in a truth table to find minimal representations of logical functions. This becomes especially helpful in digital circuit design, where simpler expressions reduce gate count and complexity.
+
+In this exercise, you will:
+
+- Convert a truth table into a Karnaugh Map.
+- Identify and mark groups (1s and don’t-cares) for minimization.
+- Derive simplified Boolean expressions.
+- Practice both single-output and multi-output scenarios.
 
 ## 2) Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
 
-<details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
-</details>
+### Task 1: Interpreting a 3-variable K-Map
+
+You are given the following truth table visualized in a K-Map:
+
+|       | A=0 C=0 | A=0 C=1 | A=1 C=1 | A=1 C=0 |
+|-------|---------|---------|---------|---------|
+| B=0   |    1    |   0     |   1     |   1     |
+| B=1   |    1    |   1     |   0     |   1     |
+
+- Transfer this table into a 3-variable K-Map.
+- Identify all groups of 1s that can be combined (groups of 1, 2, or 4).
+- Derive the minimized Boolean expression.
+
+### Task 2: Multi-output Truth Table
+
+Based on the following truth table:
+
+| B₁ | B₀ | A₁ | A₀ | Q₂ | Q₁ | Q₀ |
+|------|------|------|------|------|------|------|
+|  0   |  0   |  0   |  0   |  0   |  0   |  0   |
+|  0   |  0   |  0   |  1   |  0   |  0   |  1   |
+|  0   |  0   |  1   |  0   |  0   |  1   |  0   |
+|  0   |  0   |  1   |  1   |  0   |  1   |  1   |
+|  0   |  1   |  0   |  0   |  1   |  0   |  0   |
+|  0   |  1   |  0   |  1   |  1   |  0   |  1   |
+|  0   |  1   |  1   |  0   |  1   |  1   |  0   |
+|  0   |  1   |  1   |  1   |  1   |  1   |  1   |
+|  1   |  0   |  0   |  0   |  0   |  0   |  0   |
+|  1   |  0   |  0   |  1   |  0   |  0   |  1   |
+|  1   |  0   |  1   |  0   |  0   |  1   |  0   |
+|  1   |  0   |  1   |  1   |  0   |  1   |  1   |
+|  1   |  1   |  0   |  0   |  1   |  0   |  0   |
+|  1   |  1   |  0   |  1   |  1   |  0   |  1   |
+|  1   |  1   |  1   |  0   |  1   |  1   |  0   |
+|  1   |  1   |  1   |  1   |  1   |  1   |  1   |
+
+- Choose one output (e.g., Q₀) and construct a 4-variable K-Map.
+- Minimize the Boolean function using grouping.
+- Repeat for Q₁ and Q₂ (optional).
 
 ## 3) Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+
+- What are the advantages of using a Karnaugh Map instead of algebraic simplification?
+- How many cells does a K-Map need for a function with 3 inputs? What about 4 inputs?
+- Why is a "gray code" ordering used in K-Maps?
+- Which outputs in the second table result in the most compact logic expressions?
+- What is the largest grouping (by number of 1s) you were able to make?
 
 ## 4) Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
 
+K-Maps help you build intuition about how logic can be minimized graphically. Always look for symmetry and adjacency in the 1s. Overlapping groups are allowed and often helpful. For multi-output circuits, look for shared logic between outputs to optimize hardware further.
