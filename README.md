@@ -1,8 +1,7 @@
 <!---
 {
-  "depends_on": [
-    "https://github.com/STEMgraph/9a437897-663d-442b-82bd-f34643db7e4e"
-  ],
+  "id": "4b957490-badf-4264-b9f2-1b5aa370f36e",
+  "depends_on": ["9a437897-663d-442b-82bd-f34643db7e4e"],
   "author": "Stephan Bökelmann",
   "first_used": "2025-04-01",
   "keywords": ["karnaugh map", "truth table", "boolean", "minimization"]
